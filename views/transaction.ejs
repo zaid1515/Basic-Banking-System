@@ -1,0 +1,123 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+  .marging {
+
+    font-family: 'Tilt Neon', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    color: white;
+    margin-bottom: 400px;
+  }
+
+  .marging::before {
+    content: "";
+    position: absolute;
+    background: url('assets/img/trass.avif') center center/cover;
+    height: 716px;
+    margin-top: 70px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.9 ; 
+  }
+  .marging table{
+    margin-top: 20px;
+  }
+  /* Page Title */
+.page-title {
+  font-size: 24px;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+}
+
+th {
+  background-color: #224366;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: bisque;
+}
+tr:nth-child(odd) {
+  background-color: bisque;
+}
+
+/* Hover Effect for Table Rows */
+tr:hover {
+  background-color: #1a3d62;
+  color: white;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+h1{
+  margin: 12px;
+  padding: 0;
+}
+.hedd{
+  color:rgba(11 44 90 / 90%) ;
+  background-color:  rgba(249, 213, 145,.8);
+  border-radius: 1rem;
+  padding: 0px 0px;
+}
+</style>
+
+<%- include("header")%>
+<section class="marging" style="margin-bottom: 5%;">
+  <div class="hedd"  style="text-align: center; 
+  font-family: 'Tilt Neon', cursive;">
+    <h1 style="color:rgba(11 44 90 / 90%) ;font-size:200%;
+    font-family: 'Tilt Neon', cursive;">Transaction History</h1>
+  </div>
+
+  <HR>
+  <table class="table table-striped customerlist-table">
+    <thead>
+      <tr>
+        <th>SR. NO.</th>
+        <th>SENDER</th>
+        <th>RECEIVER</th>
+        <th>TRANSFER AMT</th>
+        <th>DATE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%transactions.forEach(function(transaction, i){%>
+        <tr>
+          <td><%=i+1%></td>
+          <td><%=transaction.sender%></td>
+          <td><%=transaction.receiver%></td>
+          <td>$<%=transaction.amount%></td>
+          <td><%=transaction.date%></td>
+        </tr>
+      <%})%>
+    </tbody>
+  </table>
+</section>
+<%- include("footer")%>

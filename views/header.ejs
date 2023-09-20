@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>SwissBank</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="assets/effect/aos/aos.css" rel="stylesheet">
+  <link href="assets/effect/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/effect/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/effect/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/effect/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/effect/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/effect/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dongle&family=Poppins:wght@500&display=swap" rel="stylesheet">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+  body{
+    
+    font-family: 'Tilt Neon', cursive;
+  }
+
+  #header {
+    position: sticky;
+    background-color: rgba(44, 81, 132, 255);
+    display: flex;
+  /*  justify-content: space-between;*/
+    align-items: center; 
+    margin: 0;
+    padding: 0;
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: 20px 46px;
+  }
+  
+  .logo {
+    display: flex; 
+  /*  align-items: center; */
+    margin-right: 10px;
+  }
+  
+  .logo > img {
+    height: 50px;
+    border: 2.5px solid #F8D99B;
+  }
+  .navbar {
+    margin-left: 50px;
+    display: flex; 
+  /*  align-items: center; */
+  }
+  
+  .navbar ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+  }
+  .navbar a{
+    font-size: larger;
+    border: 2px solid rgba(44,81,132,255) ;
+    border: 2px solid rgba(44,81,132,255) ;
+    border-radius: 8px;
+    color:#F8D99B;
+    margin: 0;
+    padding: 9px 16px 9px 16px;
+   
+  }
+  .navbar li{
+    margin-left: 18px;
+    margin-right:18px;
+  }
+  .navbar{
+    margin-left: 50px;
+  }
+  
+  .navbar li a{
+    background-color: #F8D99B;
+    color: rgba(44,81,132,255);
+    font-size: 130%;
+  }
+  .navbar a:hover {
+    background-color:rgba(44,81,132,255);
+     transition: background-color 0.8s ease;
+  }
+  .search-box{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    margin-left: 20px;
+  }
+  .input-search{
+    height: 32px;
+    width: 0px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: #22a6b3;
+    padding-right: 40px;
+    color:#fff;
+  }
+  .input-search::placeholder{
+    color:rgba(255,255,255,.5);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+  .btn-search{
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color:#ffffff ;
+    background-color:transparent;
+    pointer-events: painted;  
+  }
+  .btn-search:focus ~ .input-search{
+    width: 200px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+  .input-search:focus{
+    width: 250px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+  
+  
+  .ri-search-line{
+    font-size: larger;
+    margin-right: 100px;
+  }
+
+</style>
+</head>
+<body>
+  <header id="header" class="fixed-top d-flex align-items-center">
+      <div class="logo" >
+       <img src="assets/img/mainlogo.png" alt="SwissBank Logo">
+      </div>      
+      <div id="navbar" class="navbar">
+ 
+
+      
+        <ul>
+          <li><a class="" href="/">Home</a></li>
+          <li><a class="" href="/customerlist">Customers</a></li>
+          <li><a class="" href="/payment">Money Transfer</a></li>
+          <li><a class="" href="/transaction">Transactions</a></li>
+        </ul>
+
+        <i class="bi bi-list mobile-nav-toggle"></i>
+        <div class="search-box">
+          <button style="    padding: 0.7em 1.8em;"class="btn-search"><i class="ri-search-line"></i></button>
+          <input type="text" class="input-search" placeholder="Type to Search...">
+        </div>
+      
+      </div>
+
+  </header>
+</body>
